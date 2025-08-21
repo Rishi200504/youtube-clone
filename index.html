@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Youtube</title>
+    <style>
+        .body {
+            margin: 0%;
+            border: 0%;
+            scrollbar-width: none;
+            font-family: 'Roboto Mono', monospace; 
+
+        }
+
+        .container {
+            height: 100dvh;
+            width: 100dvw;
+            background-color: rgba(16, 16, 16);
+        }
+
+        .right {
+            height: 15%;
+            width: 85%;
+            top: 0dvh;
+            right: 0px;
+            background-color: rgba(39, 39, 39);
+            position: fixed;
+        }
+
+        .left {
+            height: 100%;
+            width: 15%;
+            left: 0dvh;
+            top: 0dvh;
+            position: fixed;
+            background-color: rgb(16, 3, 3);
+            overflow: scroll;
+            scrollbar-width: none;
+        }
+
+        .content {
+            width: 85%;
+            background-color: rgba(25, 26, 26, 0.888);
+            position: fixed;
+            left: 15%;
+            height: 85%;
+            top: 15%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            overflow: scroll;
+        }
+
+        .first {
+            width: 100%;
+            height: 50%;
+            background-color: rgb(48, 33, 28);
+        }
+
+        .second {
+            width: 100%;
+            height: 50%;
+            background-color: darkgray;
+            scrollbar-width: none;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            overflow: scroll;
+            flex: wrap;
+            
+        }
+
+        .hello {
+            background-color: rgba(30, 31, 31, 0.636);
+            padding: 20px 20px;
+            margin: 20px;
+            border-radius: 10px;
+            display: flex;
+        }
+
+
+        .video{
+                width: 500px;
+                height: 350px;
+                margin: 80px 80px;
+                background-color: rgb(184, 61, 61);
+                border-radius: 15px;
+                align-items: center;
+
+            }
+            .videos{
+                width: 500px;
+            }
+            .high{
+                width:15%;
+                height:110px;
+                background-color: rgb(78, 191, 61);
+                position: fixed;
+            }
+            .one{
+                display: flex;
+                border-radius: 20px;
+                background-color: rgb(22, 14, 5);
+                margin: 10px 30px ;
+                justify-content: space-evenly;
+                cursor: pointer;
+
+            }
+            .para{
+                font-size: 30px;
+                color: white;
+                cursor: pointer;
+            }
+            .para:hover{
+                color: black;
+                cursor: pointer;
+                transition: 0.1s all ease;
+            }
+            .one:hover{
+                transition: 0.1s all ease;
+                background-color: azure;
+                cursor: pointer;
+                
+            }
+            .house{
+                font-size: 40px;
+                color: aliceblue;
+            }
+           
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="right">
+            <div class="first"></div>
+            <div class="second"></div>
+        </div>
+        <div class="left">
+            <div class="high"></div>
+            <div class="one">
+                <i class="fa-solid fa-house"></i>
+                <p class="para">Home</p>
+            </div>
+             <div class="one">
+                <p class="para">Home</p>
+            </div>
+            <div class="one">
+                <p class="para">Shorts</p>
+            </div>
+            <div class="one">
+                <p class="para">Subscriptions</p>
+            </div>
+            <div class="one">
+                <p class="para">You ></p>
+            </div>
+            <div class="one">
+                <p class="para">History</p>
+            </div>
+            <div class="one">
+                <p class="para">Playlists</p>
+            </div>
+            <div class="one">
+                <p class="para">Your videos</p>
+            </div>
+            <div class="one">
+                <p class="para">Your courses</p>
+            </div>
+             <div class="one">
+                <p class="para">Watch later</p>
+            </div>
+             <div class="one">
+                <p class="para">Liked videos</p>
+            </div>
+             <div class="one">
+                <p class="para">Your clips</p>
+            </div>
+             <div class="one">
+                <p class="para">Explorer</p>
+            </div>
+             <div class="one">
+                <p class="para">Shopping</p>
+            </div>
+             <div class="one">
+                <p class="para">Music</p>
+            </div>
+
+        </div>
+        <div class="content">
+            <div class="video">
+                <div class="videos">
+                <form>
+                    <img src="image.png">
+                </form>
+                </div>
+            </div>
+            <div class="video">
+                <form>
+                    <img src="image.png">
+                </form>
+            </div>
+            <div class="video">
+                <form>
+                    <img src="image.png">
+                </form>
+            </div>
+            <div class="video">
+                <form>
+                    <img src="image.png">
+                </form>
+            </div>
+            <div class="video">
+                <form>
+                    <img src="image.png">
+                </form>
+            </div>
+            <div class="video">
+                <form>
+                    <img src="image.png">
+                </form>
+            </div>
+            <div class="video">
+                <form>
+                    <img src="image.png">
+                </form>
+            </div>
+            <div class="video">
+                <form>
+                    <img src="image.png">
+                </form>
+            </div>
+            <div class="video">
+                <form>
+                    <img src="image.png">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
