@@ -8,14 +8,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Youtube</title>
     <style>
         .body {
             margin: 0%;
             border: 0%;
             scrollbar-width: none;
-            font-family: 'Roboto Mono', monospace; 
+            font-family: 'Roboto Mono', monospace;
 
         }
 
@@ -40,7 +43,7 @@
             left: 0dvh;
             top: 0dvh;
             position: fixed;
-            background-color: rgb(16, 3, 3);
+            background-color: black;
             overflow: scroll;
             scrollbar-width: none;
         }
@@ -56,193 +59,497 @@
             flex-wrap: wrap;
             justify-content: space-evenly;
             overflow: scroll;
+            scrollbar-width: none;
         }
 
         .first {
             width: 100%;
             height: 50%;
-            background-color: rgb(48, 33, 28);
+            background-color: rgb(16, 16, 16);
+            display: flex;
+            flex-direction: center;
+            align-items: center;
+        }
+
+        .search {
+            width: 700px;
+            height: 95px;
+            border: none;
+            background-color: black;
+            font-size: 30px;
+            border-radius: 30px 0px 0px 30px;
+
+        }
+
+        .search-bar {
+            width: 100%;
+            height: 100px;
+            background-color: rgba(3, 3, 3, 0.516);
+            align-items: center;
+            display: flex;
+            margin: 30%;
+            border-radius: 30px;
+            align-items: center;
+            color: white;
+            font-size: 70px;
+            justify-content: space-around;
+            cursor: pointer;
         }
 
         .second {
             width: 100%;
             height: 50%;
-            background-color: darkgray;
             scrollbar-width: none;
             display: flex;
             justify-content: start;
             align-items: center;
             overflow: scroll;
             flex: wrap;
-            
         }
 
         .hello {
-            background-color: rgba(30, 31, 31, 0.636);
+            background-color: rgba(30, 31, 31, 0.595);
             padding: 20px 20px;
             margin: 20px;
             border-radius: 10px;
             display: flex;
+            color: white;
+            font-size: 45px;
+            cursor: pointer;
+        }
+
+        .hello:hover {
+            background-color: black;
+            transition: 0s all ease;
         }
 
 
-        .video{
-                width: 500px;
-                height: 350px;
-                margin: 80px 80px;
-                background-color: rgb(184, 61, 61);
-                border-radius: 15px;
-                align-items: center;
+        .video {
+            width: 800px;
+            height: 680px;
+            margin: 80px 80px;
+            background-color: black;
+            border-radius: 15px;
+            align-items: center;
+            cursor: pointer;
 
-            }
-            .videos{
-                width: 500px;
-            }
-            .high{
-                width:15%;
-                height:110px;
-                background-color: rgb(78, 191, 61);
-                position: fixed;
-            }
-            .one{
-                display: flex;
-                border-radius: 20px;
-                background-color: rgb(22, 14, 5);
-                margin: 10px 30px ;
-                justify-content: space-evenly;
-                cursor: pointer;
+        }
 
-            }
-            .para{
-                font-size: 30px;
-                color: white;
-                cursor: pointer;
-            }
-            .para:hover{
-                color: black;
-                cursor: pointer;
-                transition: 0.1s all ease;
-            }
-            .one:hover{
-                transition: 0.1s all ease;
-                background-color: azure;
-                cursor: pointer;
-                
-            }
-            .house{
-                font-size: 40px;
-                color: aliceblue;
-            }
-           
+        .videos {
+            width: 100%;
+            display: flex;
+            border-radius: 15px;
+        }
+
+        .high {
+            width: 15%;
+            height: 200px;
+            background-color: rgb(9, 9, 9);
+            position: fixed;
+            justify-content: space-evenly;
+            cursor: pointer;
+            color: white;
+            font-size: 80px;
+            align-items: center;
+            display: flex;
+
+
+        }
+
+        .low {
+            width: 100%;
+            height: auto;
+            background-color: rgb(14, 14, 15);
+            overflow: scroll;
+            scrollbar-width: none;
+        }
+
+        .one {
+            display: flex;
+            border-radius: 20px;
+            background-color: black margin: 10px 30px;
+            justify-content: space-evenly;
+            cursor: pointer;
+            color: white;
+            font-size: 70px;
+            align-items: center;
+
+        }
+
+        .para {
+            font-size: 70px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .para:hover {
+            color: white;
+            cursor: pointer;
+            transition: 0.1s all ease;
+        }
+
+        .one:hover {
+            transition: 0.1s all ease;
+            background-color: rgba(128, 128, 128, 0.293);
+            cursor: pointer;
+
+        }
+
+        .create {
+            background-color: rgb(15, 16, 16);
+            width: 570px;
+            height: 100px;
+            margin-left: 300px;
+            border-radius: 30px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .end {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(48, 52, 50, 0.818);
+            border-radius: 40px;
+            font-size: 60px;
+            align-items: center;
+            display: flex;
+            color: white;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .end:hover {
+            transition: 0.1s all ease;
+            background-color: rgba(88, 83, 83, 0.612);
+
+        }
+
+        .rishi {
+            width: 200px;
+            height: 80px;
+            background-color: rgba(45, 52, 49, 0.378);
+            border-radius: 40px;
+            font-size: 50px;
+            align-items: center;
+            display: flex;
+            color: white;
+            cursor: pointer;
+        }
+
+        .rishi:hover {
+            transition: 0.1s all ease;
+            background-color: rgba(42, 41, 41, 0.989);
+        }
+
+        .mic2 {
+            font-size: 30px;
+        }
+
+        .a {
+            font-size: 50px;
+            margin-top: -10px;
+            color: white;
+            margin: 10px;
+        }
+
+        .b {
+            font-size: 40px;
+            margin-top: -40px;
+            color: rgba(221, 218, 218, 0.655);
+            margin: 10px;
+        }
+
+        .c {
+            font-size: 40px;
+            margin-top: -30px;
+            margin: 10px;
+            color: grey;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <div class="right">
-            <div class="first"></div>
-            <div class="second"></div>
-        </div>
-        <div class="left">
-            <div class="high"></div>
-            <div class="one">
-                <i class="fa-solid fa-house"></i>
-                <p class="para">Home</p>
-            </div>
-             <div class="one">
-                <p class="para">Home</p>
-            </div>
-            <div class="one">
-                <p class="para">Shorts</p>
-            </div>
-            <div class="one">
-                <p class="para">Subscriptions</p>
-            </div>
-            <div class="one">
-                <p class="para">You ></p>
-            </div>
-            <div class="one">
-                <p class="para">History</p>
-            </div>
-            <div class="one">
-                <p class="para">Playlists</p>
-            </div>
-            <div class="one">
-                <p class="para">Your videos</p>
-            </div>
-            <div class="one">
-                <p class="para">Your courses</p>
-            </div>
-             <div class="one">
-                <p class="para">Watch later</p>
-            </div>
-             <div class="one">
-                <p class="para">Liked videos</p>
-            </div>
-             <div class="one">
-                <p class="para">Your clips</p>
-            </div>
-             <div class="one">
-                <p class="para">Explorer</p>
-            </div>
-             <div class="one">
-                <p class="para">Shopping</p>
-            </div>
-             <div class="one">
-                <p class="para">Music</p>
-            </div>
-
-        </div>
-        <div class="content">
-            <div class="video">
-                <div class="videos">
-                <form>
-                    <img src="image.png">
-                </form>
+            <div class="first">
+                <div class="search-bar">
+                    <form>
+                        <input type="search" placeholder="Search" class="search">
+                    </form>
+                    <i class="fa-solid fa-magnifying-glass" class="mag"></i>
+                </div>
+                <div class="mic">
+                    <i class="fa-solid fa-microphone" class="mic2"></i>
+                </div>
+                <div class="create">
+                    <div class="rishi">
+                        <i class="fa-regular fa-plus"></i>
+                        <p>create</p>
+                    </div>
+                    <div class="end">
+                        <i class="fa-regular fa-bell"></i>
+                    </div>
+                    <div class="end">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
                 </div>
             </div>
-            <div class="video">
-                <form>
-                    <img src="image.png">
-                </form>
-            </div>
-            <div class="video">
-                <form>
-                    <img src="image.png">
-                </form>
-            </div>
-            <div class="video">
-                <form>
-                    <img src="image.png">
-                </form>
-            </div>
-            <div class="video">
-                <form>
-                    <img src="image.png">
-                </form>
-            </div>
-            <div class="video">
-                <form>
-                    <img src="image.png">
-                </form>
-            </div>
-            <div class="video">
-                <form>
-                    <img src="image.png">
-                </form>
-            </div>
-            <div class="video">
-                <form>
-                    <img src="image.png">
-                </form>
-            </div>
-            <div class="video">
-                <form>
-                    <img src="image.png">
-                </form>
+            <div class="second">
+                <p class="hello">All</p>
+                <p class="hello">Music</p>
+                <p class="hello">TeluguCinema</p>
+                <p class="hello">Dhee</p>
+                <p class="hello">AnirudhRavichander</p>
+                <p class="hello">Dramedy</p>
+                <p class="hello">Live</p>
+                <p class="hello">Mixes</p>
+                <p class="hello">Gaming</p>
+                <p class="hello">Indian</p>
+                <p class="hello">Python</p>
+                <p class="hello">GameShows</p>
+                <p class="hello">Thrillers</p>
+                <p class="hello">Calculations</p>
+                <p class="hello">Calculations</p>
+                <p class="hello">Calculations</p>
+                <p class="hello">Calculations</p>
+                <p class="hello">Calculations</p>
+                <p class="hello">Python</p>
+                <p class="hello">Python</p>
+                <p class="hello">Python</p>
+                <p class="hello">Python</p>
+                <p class="hello">Python</p>
+                <p class="hello">Python</p>
+
+
             </div>
         </div>
-    </div>
+        <div class="left">
+            <div class="high">
+                <i class="fa-solid fa-bars"></i>
+                <img src="image.png">
+            </div>
+            <div class="low">
+                <div class="one">
+                    <i class="fa-regular fa-house"></i>
+                    <p class="para">Home</p>
+                </div>
+                <div class="one">
+                    <i class="fa-regular fa-house"></i>
+                    <p class="para">Home</p>
+                </div>
+                <div class="one">
+                    <i class="fa-solid fa-clapperboard"></i>
+                    <p class="para">Shorts</p>
+                </div>
+                <div class="one">
+                    <i class="fa-regular fa-play-circle"></i>
+                    <p class="para">Subscriptions</p>
+                </div>
+                <hr>
+                <div class="one">
+                    <p class="para">You ></p>
+                </div>
+                <div class="one">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <p class="para">History</p>
+                </div>
+                <div class="one">
+                    <i class="fa-solid fa-list"></i>
+                    <p class="para">Playlists</p>
+                </div>
+                <div class="one">
+                    <i class="fa-solid fa-video"></i>
+                    <p class="para">Your videos</p>
+                </div>
+                <div class="one">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p class="para">Your courses</p>
+                </div>
+                <div class="one">
+                    <i class="fa-regular fa-clock"></i>
+                    <p class="para">Watch later</p>
+                </div>
+                <div class="one">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    <p class="para">Liked videos</p>
+                </div>
+                <div class="one">
+                    <i class="fa-solid fa-scissors"></i>
+                    <p class="para">Your clips</p>
+                </div>
+                <hr>
+                <div class="one">
+                    <p class="para">Explorer</p>
+                </div>
+                <div class="one">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <p class="para">Shopping</p>
+                </div>
+                <div class="one">
+                    <i class="fa-solid fa-music"></i>
+                    <p class="para">Music</p>
+                </div>
+                <div class="one">
+                    <i class="fa-solid fa-clapperboard"></i>
+                    <p class="para">Films</p>
+                </div>
+                <div class="one">
+                    <i class="fa-solid fa-tower-broadcast"></i>
+                    <p class="para">Live</p>
+                </div>
+                <div class="one">
+                    <i class="fa-solid fa-gamepad"></i>
+                    <p class="para">Gaming</p>
+                </div>
+                <div class="one">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <p class="para">News</p>
+                </div>
+                <div class="one">
+                    <i class="fa-solid fa-trophy"></i>
+                    <p class="para">Sports</p>
+                </div>
+                <div class="one">
+                    <i class="fa-solid fa-podcast"></i>
+                    <p class="para">Podcast</p>
+                </div>
+                <hr>
+                <div class="one">
+                    <p class="para">Music</p>
+                </div>
+                <div class="one">
+                    <p class="para">Music</p>
+                </div>
+                <div class="one">
+                    <p class="para">Music</p>
+                </div>
+
+            </div>
+            <div class="content">
+                <div class="video">
+                    <form>
+                        <img src="img.png" class="videos">
+                        <div class="puli">
+                            <p class="a">Python Full Course</p>
+                            <p class="b">Telsuko</p>
+                            <p class="c">2 watcing</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="video">
+                    <form>
+                        <img src="img.png" class="videos">
+                        <div class="puli">
+                            <p class="a">Python Full Course</p>
+                            <p class="b">Telsuko</p>
+                            <p class="c">2 watcing</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="video">
+                    <form>
+                        <img src="img.png" class="videos">
+                        <div class="puli">
+                            <p class="a">Python Full Course</p>
+                            <p class="b">Telsuko</p>
+                            <p class="c">2 watcing</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="video">
+                    <form>
+                        <img src="img.png" class="videos">
+                        <div class="puli">
+                            <p class="a">Python Full Course</p>
+                            <p class="b">Telsuko</p>
+                            <p class="c">2 watcing</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="video">
+                    <form>
+                        <img src="img.png" class="videos">
+                        <div class="puli">
+                            <p class="a">Python Full Course</p>
+                            <p class="b">Telsuko</p>
+                            <p class="c">2 watcing</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="video">
+                    <form>
+                        <img src="img.png" class="videos">
+                        <div class="puli">
+                            <p class="a">Python Full Course</p>
+                            <p class="b">Telsuko</p>
+                            <p class="c">2 watcing</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="video">
+                    <form>
+                        <img src="img.png" class="videos">
+                        <div class="puli">
+                            <p class="a">Python Full Course</p>
+                            <p class="b">Telsuko</p>
+                            <p class="c">2 watcing</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="video">
+                    <form>
+                        <img src="img.png" class="videos">
+                        <div class="puli">
+                            <p class="a">Python Full Course</p>
+                            <p class="b">Telsuko</p>
+                            <p class="c">2 watcing</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="video">
+                    <form>
+                        <img src="img.png" class="videos">
+                        <div class="puli">
+                            <p class="a">Python Full Course</p>
+                            <p class="b">Telsuko</p>
+                            <p class="c">2 watcing</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="video">
+                    <form>
+                        <img src="img.png" class="videos">
+                        <div class="puli">
+                            <p class="a">Python Full Course</p>
+                            <p class="b">Telsuko</p>
+                            <p class="c">2 watcing</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="video">
+                    <form>
+                        <img src="img.png" class="videos">
+                        <div class="puli">
+                            <p class="a">Python Full Course</p>
+                            <p class="b">Telsuko</p>
+                            <p class="c">2 watcing</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="video">
+                    <form>
+                        <img src="img.png" class="videos">
+                        <div class="puli">
+                            <p class="a">Python Full Course</p>
+                            <p class="b">Telsuko</p>
+                            <p class="c">2 watcing</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
 </body>
 
